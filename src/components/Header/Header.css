@@ -1,0 +1,13 @@
+.header {
+  position: absolute;
+  left: 100px;
+  top: 1.7em;
+}
+
+.ProjectsContainer .header {
+  color: black;
+}
+
+.mainPage .header {
+  color: white;
+}

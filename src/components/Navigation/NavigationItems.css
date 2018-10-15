@@ -1,0 +1,29 @@
+.NavigationItemsHome {
+  position: absolute;
+  left: 100px;
+  top: 2em;
+  padding: 0;
+  font-size: 5em;
+  list-style-type: none;
+  line-height: 1.5em;
+  color: white;
+}
+
+.NavigationItemsHome a {
+  color: white;
+}
+
+.NavigationItemsProjects {
+  margin-top: 4em;
+  font-size: 2em;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.NavigationItemsProjects li {
+}
+
+.NavigationItemsProjects a {
+  color: black;
+}

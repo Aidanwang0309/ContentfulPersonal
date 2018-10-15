@@ -1,0 +1,26 @@
+.NavigationItem {
+}
+.NavigationItem a {
+  text-decoration: none;
+}
+.NavigationItem a:hover {
+  color: #bfccd8;
+}
+.NavigationItem a:active,
+.NavigationItem a.active {
+  text-decoration: line-through;
+}
+
+@media (min-width: 500px) {
+  .NavigationItem {
+  }
+
+  .NavigationItem a {
+  }
+
+  .NavigationItem a:hover,
+  .NavigationItem a:active,
+  .NavigationItem a.active {
+    color: #bfccd8;
+  }
+}
