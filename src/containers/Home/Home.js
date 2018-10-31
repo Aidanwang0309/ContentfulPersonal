@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import {
   BloomEffect,
-  GlitchEffect,
   EffectComposer,
   EffectPass,
   RenderPass
@@ -106,12 +105,12 @@ class Home extends Component {
     this.scene.add(ambientLight);
 
     let lights = [];
-    lights[0] = new THREE.DirectionalLight(0xffffff, 1);
-    lights[0].position.set(1, 0, 0);
+    lights[0] = new THREE.DirectionalLight(0xaeb2d3, 1);
+    lights[0].position.set(5, 0, 0);
     lights[1] = new THREE.DirectionalLight(0x11e8bb, 1);
-    lights[1].position.set(0.75, 1, 0.5);
+    lights[1].position.set(2, 5, 1);
     lights[2] = new THREE.DirectionalLight(0x8200c9, 1);
-    lights[2].position.set(-0.75, -1, 0.5);
+    lights[2].position.set(-2, -5, 1);
     this.scene.add(lights[0]);
     this.scene.add(lights[1]);
     this.scene.add(lights[2]);
@@ -121,8 +120,8 @@ class Home extends Component {
 
     //PASSES
     const bloomEffect = new BloomEffect();
-    bloomEffect.blendMode.opacity.value = 1.5;
-    bloomEffect.setResolutionScale(0.4);
+    bloomEffect.blendMode.opacity.value = 1.0;
+    bloomEffect.setResolutionScale(0.7);
 
     // const glitchEffect = new GlitchEffect({
     //   perturbationMap: assets.get("perturbation-map"),

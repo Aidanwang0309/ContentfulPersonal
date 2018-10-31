@@ -3,6 +3,7 @@ import { updateObject } from "../utility";
 
 const initialState = {
   projects: [],
+  projectDetail: [],
   loading: false
 };
 
@@ -18,6 +19,10 @@ const fetchProjectsSuccess = (state, action) => {
   return updateObject(state, { projects: action.projects, loading: false });
 };
 
+const fetchProjectDetailSuccess = (state, action) => {
+  return updateObject(state, { projectDetail: action.projectDetail });
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_PROJECTS_START:
@@ -26,6 +31,8 @@ const reducer = (state = initialState, action) => {
       return fetchProjectsSuccess(state, action);
     case actionTypes.FETCH_PROJECTS_FAIL:
       return fetchProjectsFail(state, action);
+    case actionTypes.FETCH_PROJECTSDETAIL_SUCCESS:
+      return fetchProjectDetailSuccess(state, action);
     default:
       return state;
   }
